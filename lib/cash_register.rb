@@ -5,10 +5,11 @@
 ## 4. Void the last transaction
 class CashRegister
 
-  attr_accessor :discount, :total, :last_item, :items
+  attr_accessor :discount, :total, :last_item
   def initialize(discount = 0)
     @total = 0
     @discount = discount
+    @items = []
   end
 
   def add_item(title, price, quantity = 1)
